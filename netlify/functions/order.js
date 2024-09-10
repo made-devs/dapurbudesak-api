@@ -1,7 +1,7 @@
 const data = require('../../menu.json');
 
 exports.handler = async function (event, context) {
-  const menuData = data.menu; // Mengambil bagian "menu" dari JSON
+  const orderData = data.order; // Mengambil bagian "order" dari JSON
 
   return {
     statusCode: 200,
@@ -10,6 +10,6 @@ exports.handler = async function (event, context) {
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     },
-    body: JSON.stringify(menuData),
+    body: JSON.stringify(orderData),
   };
 };
